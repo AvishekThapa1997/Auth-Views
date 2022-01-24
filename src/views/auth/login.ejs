@@ -12,42 +12,23 @@
   <body>
     <div class="container">
       <h1 class="icon"><i class="fas fa-sign-in-alt"></i> Login</h1>
-      <% if(validationErrors) { %> <%for(const params in validationErrors){%>
-      <%- include("../common/message.ejs",{ message :
-      validationErrors[params] ,
-      error:true})%> <%}%> <%}%>
-      <%if(successMessage && successMessage.length > 0) {%>
-          <%- include("../common/message.ejs",{
-            message:successMessage[0],
-            error:false
-          }) %>
-      <%}%>
-      <%if(errorMessage && errorMessage.length > 0) {%>
-          <%- include("../common/message.ejs",{
-            message:errorMessage[0],
-            error:true
-          }) %>
-      <%}%>
       <form action="/auth/login" method="post" class="form">
         <div class="form__control">
           <label for="email">Email</label>
           <input 
-            class="<%=validationErrors?.email  ? 'invalid' : ''%>"
             type="email" 
             name="email" 
             placeholder="Enter email"
             id="email" 
-            value="<%=prevInputs?.email ?? '' %>"/>
+            />
         </div>
         <div class="form__control">
           <label for="password">Password</label>
           <input 
-            class="<%=validationErrors?.password  ? 'invalid' : ''%>"
             type="password" 
             name="password" 
             id="password" 
-            placeholder="Enter password"
-            value="<%=prevInputs?.password ?? '' %>"                            />
+            placeholder="Enter password"                         />
         </div>
         <div class="form__control">
           <button type="submit" class="btn btn-red">Login</button>

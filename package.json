@@ -1,0 +1,31 @@
+{
+  "name": "auth-views",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "16.13.0"
+  },
+  "scripts": {
+    "start:dev": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvishekThapa1997/Auth-Views.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AvishekThapa1997/Auth-Views/issues"
+  },
+  "homepage": "https://github.com/AvishekThapa1997/Auth-Views#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

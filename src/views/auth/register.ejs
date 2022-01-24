@@ -12,52 +12,36 @@
   <body>
     <div class="container">
       <h1 class="icon"><i class="fas fa-user-plus"></i> Register</h1>
-      <% if(validationErrors) { %> <%for(const params in validationErrors){%>
-      <%- include("../common/message.ejs",{ message :
-      validationErrors[params],error:true })%> <%}%> <%}%>
       <form action="/auth/register" method="post" class="form">
         <div class="form__control">
           <label for="name">Name</label>
-          <input
-            class="<%=validationErrors?.name ? 'invalid' : ''%>"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter name"
-            value="<%=prevInputs?.name ?? '' %>"
-          />
+          <input type="text" name="name" id="name" placeholder="Enter name" />
         </div>
         <div class="form__control">
           <label for="email">Email</label>
           <input
-            class="<%=validationErrors?.email ? 'invalid' : ''%>"
             type="email"
             name="email"
             id="email"
             placeholder="Enter email"
-            value="<%=prevInputs?.email ?? '' %>"
           />
         </div>
         <div class="form__control">
           <label for="password">Password</label>
           <input
-            class="<%=validationErrors?.password ? 'invalid' : ''%>"
             type="password"
             name="password"
             id="password"
             placeholder="Enter Password"
-            value="<%=prevInputs?.password ?? '' %>"
           />
         </div>
         <div class="form__control">
           <label for="confirmPassword">Confirm Password</label>
           <input
-            class="<%=validationErrors?.confirmPassword ? 'invalid' : ''%>"
             type="password"
             name="confirmPassword"
             id="confirmPassword"
             placeholder="Enter confirm password"
-            value="<%=prevInputs?.confirmPassword ?? '' %>"
           />
         </div>
         <div class="form__control">
